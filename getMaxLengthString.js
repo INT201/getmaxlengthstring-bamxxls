@@ -11,6 +11,6 @@ function getMaxLengthString(arrayOfString) {
       max = arrayOfString[i].length;
     }
   }
-  return arrayOfString.filter(str => str.length === max);
+  return arrayOfString.filter(arrayOfString => arrayOfString.length === max);
 }
 module.exports = getMaxLengthString
