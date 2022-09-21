@@ -1,10 +1,16 @@
 const { template } = require('@babel/core')
 
 function getMaxLengthString(arrayOfString) {
+  if(arrayOfString === null || arrayOfString === undefined){
+    return undefined
+  }
 
-  //already add SSH key
-  
-  //lets push to git
-  //push again
+  let max = 0
+  for (let i = 0; i < arrayOfString.length ; i++){
+    if(arrayOfString[i].length > max){
+      max = arrayOfString[i].length;
+    }
+  }
+  return arrayOfString.filter(str => str.length === max);
 }
 module.exports = getMaxLengthString

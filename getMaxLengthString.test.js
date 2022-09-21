@@ -1,6 +1,5 @@
 const testFn = require('./getMaxLengthString')
 
--- 
 test('output#1', () => {
   expect(testFn(['hello', 'hi', 'hey'])).toStrictEqual(['hello'])
 })
