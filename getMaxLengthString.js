@@ -1,16 +1,22 @@
 const { template } = require('@babel/core')
 
 function getMaxLengthString(arrayOfString) {
-  if(arrayOfString === null || arrayOfString === undefined){
+  if(!arrayOfString){
     return undefined
   }
 
-  let max = 0
-  for (let i = 0; i < arrayOfString.length ; i++){
-    if(arrayOfString[i].length > max){
-      max = arrayOfString[i].length;
-    }
-  }
-  return arrayOfString.filter(arrayOfString => arrayOfString.length === max);
+  let maxLength = arrayOfString[0].length
+  const maxString = []
+
+  arrayOfString.forEach((eachString) => {
+    if(eachString.length > maxLength) maxLength = eachString.length
+  })
+
+  arrayOfString.forEach((eachString) => {
+    if(eachString.length === maxLength) maxString.push(eachString)
+  })
+
+  return maxString
 }
+
 module.exports = getMaxLengthString
