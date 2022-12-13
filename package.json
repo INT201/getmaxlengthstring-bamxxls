@@ -10,5 +10,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "io": "^1.0.5"
   }
 }
